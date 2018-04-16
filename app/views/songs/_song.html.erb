@@ -1,0 +1,10 @@
+<p>
+  <strong>Song Title:</strong>
+  <%= song.name %>
+</p>
+
+<p>
+    <%= link_to 'Destroy Song', [song.genre, song],
+                            method: :delete,
+                            data: { confirm: 'Are you sure?' } %>
+</p>

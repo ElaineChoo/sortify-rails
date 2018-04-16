@@ -1,0 +1,19 @@
+<p>
+  <strong>Type:</strong>
+  <%= @genre.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @genre.description %>
+</p>
+
+<h2>Songs</h2>
+<%= render @genre.songs %>
+ 
+
+<h2>Add a Song: </h2>
+<%= render 'songs/form' %>
+
+<%= link_to 'Edit', edit_genre_path(@genre) %> |
+<%= link_to 'Back', genres_path %>
