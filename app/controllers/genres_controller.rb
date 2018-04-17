@@ -36,9 +36,9 @@ class GenresController < ApplicationController
         @genre = Genre.find(params[:id])
     end
 
-    def destory
+    def destroy
         @genre = Genre.find(params[:id])
-        @genre.destory
+        @genre.destroy
 
         redirect_to genres_path        
     end
@@ -46,6 +46,6 @@ class GenresController < ApplicationController
     private
 
         def genre_params
-            params.require(:genre).permit(:name, description)            
+            params.require(:genre).permit(:name, :description)            
         end
 end

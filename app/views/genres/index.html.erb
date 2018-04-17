@@ -14,9 +14,10 @@
       <td><%= genre.description %></td>
       <td><%= link_to 'Show', genre_path(genre) %></td>
       <td><%= link_to 'Edit', edit_genre_path(genre) %></td>
-      <td><%= link_to 'Destory', genre_path(genre),
+      <td><%= link_to 'Destroy', genre_path(genre),
                                         method: :delete,
                                         data: {confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
+<%= link_to 'Back', genres_path %>

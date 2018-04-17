@@ -8,11 +8,11 @@
   <%= @genre.description %>
 </p>
 
-<h2>Songs</h2>
+<%# <h2>Songs</h2>
 <%= render @genre.songs %>
  
 
-<h2>Add a Song: </h2>
+<%# <h2>Add a Song: </h2>
 <%= render 'songs/form' %>
 
 <%= link_to 'Edit', edit_genre_path(@genre) %> |

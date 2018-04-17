@@ -1,4 +1,18 @@
-<%= form_with(model: [ @genre, @genre.songs.build ], local: true) do |form| %>
+<%= form_with model: @songs, local: true do |form| %>
+
+<% if @songs.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@songs.errors.count, "error") %> prohibited this song from being saved:
+      </h2>
+      <ul>
+        <% @songs.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= form.collection_select :genre_id, @songs, :id, :name %>
   <p>
     <%= form.label :name%><br>
     <%= form.text_field :name %>
